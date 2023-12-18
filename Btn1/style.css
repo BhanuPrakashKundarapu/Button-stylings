@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.parent{
+    background: black;
+    height: 99.9vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 15px 30px;
+    position: relative;
+    font-size: 39px;
+    overflow: hidden;
+    transition: all 1s;
+}
+a::before{
+    content: "click";
+    color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+    transform: translateY(-100%);
+    transition: all 1s;
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover::before{
+    transform: translateY(0);
+}
